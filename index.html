@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Theft Auto VI – Launch Hub</title>
+  <meta name="description" content="Unofficial fan hub for GTA VI countdowns, characters, locations, news, theories, and more.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="GTA VI Launch Hub Home">
+        <span class="logo-text">GTA VI</span>
+        <span class="logo-sub">Launch Hub</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#countdowns" class="nav-link">Countdowns</a></li>
+        <li><a href="#characters" class="nav-link">Characters</a></li>
+        <li><a href="#leonida" class="nav-link">Leonida</a></li>
+        <li><a href="#trailers" class="nav-link">Trailers</a></li>
+        <li><a href="#screenshots" class="nav-link">Screenshots</a></li>
+        <li><a href="#news" class="nav-link">News</a></li>
+        <li><a href="#theories" class="nav-link">Theories</a></li>
+        <li><a href="#summary" class="nav-link">Summary</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">Grand Theft Auto VI</h1>
+      <p class="hero-subtitle">Launch Hub</p>
+      <p class="hero-disclaimer">Unofficial Fan Website</p>
+    </div>
+    <div class="hero-grid"></div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Countdowns Section -->
+    <section class="section" id="countdowns">
+      <div class="section-container">
+        <h2 class="section-title">Countdowns</h2>
+        <p class="section-intro">All countdowns use UTC (Coordinated Universal Time). Local times are shown in the premiere schedule below.</p>
+
+        <!-- Premiere Schedule Table -->
+        <div class="premiere-schedule">
+          <h3 class="subsection-title">Premiere Schedule</h3>
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Timezone</th>
+                <th>Pre-Download</th>
+                <th>Launch</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PT</strong> (Pacific Time)</td>
+                <td>Nov 11, 2026 4:00 PM</td>
+                <td>Nov 18, 2026 4:00 PM</td>
+              </tr>
+              <tr>
+                <td><strong>ET</strong> (Eastern Time)</td>
+                <td>Nov 11, 2026 7:00 PM</td>
+                <td>Nov 18, 2026 7:00 PM</td>
+              </tr>
+              <tr>
+                <td><strong>BST</strong> (British Time)</td>
+                <td>Nov 12, 2026 12:00 AM</td>
+                <td>Nov 19, 2026 12:00 AM</td>
+              </tr>
+              <tr>
+                <td><strong>CEST</strong> (Central European)</td>
+                <td>Nov 12, 2026 1:00 AM</td>
+                <td>Nov 19, 2026 1:00 AM</td>
+              </tr>
+              <tr>
+                <td><strong>IST</strong> (Indian Standard)</td>
+                <td>Nov 12, 2026 5:30 AM</td>
+                <td>Nov 19, 2026 5:30 AM</td>
+              </tr>
+              <tr>
+                <td><strong>AEST</strong> (Australian Eastern)</td>
+                <td>Nov 12, 2026 11:00 AM</td>
+                <td>Nov 19, 2026 11:00 AM</td>
+              </tr>
+              <tr class="utc-row">
+                <td><strong>UTC</strong> (Countdown Reference)</td>
+                <td>Nov 12, 2026 00:00</td>
+                <td>Nov 19, 2026 00:00</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="schedule-note">Note: The countdown timers below use UTC. Convert to your local timezone using the table above.</p>
+        </div>
+
+        <!-- Countdown Cards -->
+        <div class="countdown-grid">
+          <div class="countdown-card">
+            <h3 class="countdown-title">GTA VI Pre-Download</h3>
+            <div class="countdown-display" id="preloadCountdown" data-event="preload">
+              <div class="countdown-item">
+                <span class="countdown-value" id="preloadDays">00</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="preloadHours">00</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="preloadMinutes">00</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="preloadSeconds">00</span>
+                <span class="countdown-label">Seconds</span>
+              </div>
+            </div>
+            <div class="countdown-status" id="preloadStatus">Upcoming</div>
+            <div class="progress-container">
+              <div class="progress-bar" id="preloadProgress">
+                <div class="progress-fill" id="preloadProgressFill" style="width: 0%;"></div>
+              </div>
+              <span class="progress-label">Pre-Download Progress</span>
+            </div>
+          </div>
+
+          <div class="countdown-card">
+            <h3 class="countdown-title">GTA VI Launch</h3>
+            <div class="countdown-display" id="launchCountdown" data-event="launch">
+              <div class="countdown-item">
+                <span class="countdown-value" id="launchDays">00</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="launchHours">00</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="launchMinutes">00</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="launchSeconds">00</span>
+                <span class="countdown-label">Seconds</span>
+              </div>
+            </div>
+            <div class="countdown-status" id="launchStatus">Upcoming</div>
+            <div class="progress-container">
+              <div class="progress-bar" id="launchProgress">
+                <div class="progress-fill" id="launchProgressFill" style="width: 0%;"></div>
+              </div>
+              <span class="progress-label">Launch Progress</span>
+            </div>
+          </div>
+
+          <div class="countdown-card">
+            <h3 class="countdown-title">Netflix to YouTube Window</h3>
+            <p class="countdown-desc">6-hour premiere window</p>
+            <div class="countdown-display" id="netflixCountdown">
+              <div class="countdown-item">
+                <span class="countdown-value" id="netflixHours">00</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="netflixMinutes">00</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="netflixSeconds">00</span>
+                <span class="countdown-label">Seconds</span>
+              </div>
+            </div>
+            <div class="countdown-status" id="netflixStatus">Checking window...</div>
+            <div class="progress-container">
+              <div class="progress-bar" id="netflixProgress">
+                <div class="progress-fill" id="netflixProgressFill" style="width: 0%;"></div>
+              </div>
+              <span class="progress-label">Window Progress</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section class="section" id="characters">
+      <div class="section-container">
+        <h2 class="section-title">Characters</h2>
+        <p class="section-intro">Official and fan-tracked characters from GTA VI.</p>
+
+        <div class="controls-bar">
+          <input type="text" id="characterSearch" class="search-input" placeholder="Search characters..." aria-label="Search characters">
+          <select id="characterFilter" class="filter-select" aria-label="Filter characters by category">
+            <option value="all">All Categories</option>
+            <option value="protagonist">Protagonists</option>
+            <option value="supporting">Supporting</option>
+            <option value="custom">Custom Notes</option>
+          </select>
+        </div>
+
+        <div class="characters-grid" id="charactersGrid">
+          <!-- Official Characters -->
+          <div class="character-card official" data-category="protagonist">
+            <div class="character-header">
+              <h3 class="character-name">Lucia Caminos</h3>
+              <span class="character-badge protagonist">Protagonist</span>
+            </div>
+            <p class="character-desc">One of the two main protagonists. A determined woman navigating the criminal underworld of Leonida.</p>
+            <div class="character-meta">
+              <span class="meta-label">Status:</span> <span class="meta-value">Confirmed</span>
+            </div>
+          </div>
+
+          <div class="character-card official" data-category="protagonist">
+            <div class="character-header">
+              <h3 class="character-name">Jason Duval</h3>
+              <span class="character-badge protagonist">Protagonist</span>
+            </div>
+            <p class="character-desc">The second main protagonist. Partner to Lucia, with a mysterious past connected to Vice City.</p>
+            <div class="character-meta">
+              <span class="meta-label">Status:</span> <span class="meta-value">Confirmed</span>
+            </div>
+          </div>
+
+          <div class="character-card official" data-category="supporting">
+            <div class="character-header">
+              <h3 class="character-name">Supporting Characters</h3>
+              <span class="character-badge supporting">Supporting</span>
+            </div>
+            <p class="character-desc">Additional characters from the GTA VI universe. More details will be revealed closer to launch.</p>
+            <div class="character-meta">
+              <span class="meta-label">Status:</span> <span class="meta-value">TBA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Character Notes Form -->
+        <div class="form-section">
+          <h3 class="form-title">Character Watchlist</h3>
+          <p class="form-instruction">Add your own character notes and theories. These are saved locally in your browser.</p>
+
+          <form id="characterForm" class="data-form">
+            <input type="hidden" id="characterId">
+            <div class="form-group">
+              <label for="characterNameInput">Character Name</label>
+              <input type="text" id="characterNameInput" class="form-input" required placeholder="e.g., Detective Martinez">
+            </div>
+            <div class="form-group">
+              <label for="characterCategoryInput">Category</label>
+              <select id="characterCategoryInput" class="form-input" required>
+                <option value="custom">Custom Note</option>
+                <option value="protagonist">Protagonist Theory</option>
+                <option value="supporting">Supporting Character</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="characterDescInput">Description / Notes</label>
+              <textarea id="characterDescInput" class="form-input" rows="3" required placeholder="Your character notes, theories, or observations..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="characterSubmitBtn">Add Character Note</button>
+              <button type="button" class="btn btn-secondary" id="characterCancelBtn" style="display: none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="empty-state" id="charactersEmpty" style="display: none;">
+          <p>No custom character notes yet. Add your first note above!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leonida Section -->
+    <section class="section" id="leonida">
+      <div class="section-container">
+        <h2 class="section-title">Leonida</h2>
+        <p class="section-intro">Explore the state of Leonida and its key locations. Official information is marked; fan theories are clearly labeled.</p>
+
+        <div class="controls-bar">
+          <input type="text" id="locationSearch" class="search-input" placeholder="Search locations..." aria-label="Search locations">
+          <select id="locationFilter" class="filter-select" aria-label="Filter locations by category">
+            <option value="all">All Categories</option>
+            <option value="city">Cities</option>
+            <option value="region">Regions</option>
+            <option value="landmark">Landmarks</option>
+            <option value="custom">Custom Notes</option>
+          </select>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="map-placeholder">
+          <div class="map-content">
+            <h3>Leonida Map</h3>
+            <p>Interactive map coming soon. Replace this placeholder with an embedded map or image.</p>
+            <div class="map-grid"></div>
+          </div>
+        </div>
+
+        <div class="locations-grid" id="locationsGrid">
+          <!-- Official Locations -->
+          <div class="location-card official" data-category="city">
+            <div class="location-header">
+              <h3 class="location-name">Vice City</h3>
+              <span class="location-badge city">City</span>
+            </div>
+            <p class="location-desc">The iconic neon-soaked metropolis returns. Based on Miami, Vice City is the heart of Leonida.</p>
+            <div class="location-poi">
+              <strong>Points of Interest:</strong> Ocean Drive, Downtown, Port District
+            </div>
+            <div class="location-meta">
+              <span class="meta-label">Status:</span> <span class="meta-value official-tag">Official</span>
+            </div>
+          </div>
+
+          <div class="location-card official" data-category="region">
+            <div class="location-header">
+              <h3 class="location-name">Leonida Keys</h3>
+              <span class="location-badge region">Region</span>
+            </div>
+            <p class="location-desc">A chain of tropical islands surrounding Vice City, offering beaches, marinas, and hidden coves.</p>
+            <div class="location-poi">
+              <strong>Points of Interest:</strong> Beach resorts, fishing villages, secret hideouts
+            </div>
+            <div class="location-meta">
+              <span class="meta-label">Status:</span> <span class="meta-value official-tag">Official</span>
+            </div>
+          </div>
+
+          <div class="location-card official" data-category="city">
+            <div class="location-header">
+              <h3 class="location-name">Port Gellhorn</h3>
+              <span class="location-badge city">City</span>
+            </div>
+            <p class="location-desc">A major port city in northern Leonida, inspired by real-world Gulf Coast locations.</p>
+            <div class="location-poi">
+              <strong>Points of Interest:</strong> Industrial docks, cargo facilities, waterfront
+            </div>
+            <div class="location-meta">
+              <span class="meta-label">Status:</span> <span class="meta-value official-tag">Official</span>
+            </div>
+          </div>
+
+          <div class="location-card official" data-category="landmark">
+            <div class="location-header">
+              <h3 class="location-name">Mount Kalaga</h3>
+              <span class="location-badge landmark">Landmark</span>
+            </div>
+            <p class="location-desc">A prominent mountain in Leonida, offering scenic views and potential hidden areas.</p>
+            <div class="location-poi">
+              <strong>Points of Interest:</strong> Summit overlook, hiking trails, radio tower
+            </div>
+            <div class="location-meta">
+              <span class="meta-label">Status:</span> <span class="meta-value official-tag">Official</span>
+            </div>
+          </div>
+
+          <div class="location-card official" data-category="region">
+            <div class="location-header">
+              <h3 class="location-name">Grassrivers</h3>
+              <span class="location-badge region">Region</span>
+            </div>
+            <p class="location-desc">Rural wetlands and grasslands, reminiscent of the Florida Everglades.</p>
+            <div class="location-poi">
+              <strong>Points of Interest:</strong> Swamps, airboat tours, wildlife
+            </div>
+            <div class="location-meta">
+              <span class="meta-label">Status:</span> <span class="meta-value official-tag">Official</span>
+            </div>
+          </div>
+
+          <div class="location-card official" data-category="city">
+            <div class="location-header">
+              <h3 class="location-name">Ambrosia</h3>
+              <span class="location-badge city">City</span>
+            </div>
+            <p class="location-desc">A coastal city in Leonida, potentially inspired by locations like Tampa or Sarasota.</p>
+            <div class="location-poi">
+              <strong>Points of Interest:</strong> Beaches, marinas, urban districts
+            </div>
+            <div class="location-meta">
+              <span class="meta-label">Status:</span> <span class="meta-value official-tag">Official</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Location Notes Form -->
+        <div class="form-section">
+          <h3 class="form-title">Location Notes</h3>
+          <p class="form-instruction">Add your own location theories and observations. Clearly distinguish fan content from official information.</p>
+
+          <form id="locationForm" class="data-form">
+            <input type="hidden" id="locationId">
+            <div class="form-group">
+              <label for="locationNameInput">Location Name</label>
+              <input type="text" id="locationNameInput" class="form-input" required placeholder="e.g., Hidden Bunker Theory">
+            </div>
+            <div class="form-group">
+              <label for="locationCategoryInput">Category</label>
+              <select id="locationCategoryInput" class="form-input" required>
+                <option value="custom">Custom Note</option>
+                <option value="city">City Theory</option>
+                <option value="region">Region Theory</option>
+                <option value="landmark">Landmark Theory</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="locationDescInput">Description / Notes</label>
+              <textarea id="locationDescInput" class="form-input" rows="3" required placeholder="Your location notes, theories, or points of interest..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="locationPoiInput">Points of Interest</label>
+              <input type="text" id="locationPoiInput" class="form-input" placeholder="e.g., Secret tunnel, abandoned facility">
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="locationSubmitBtn">Add Location Note</button>
+              <button type="button" class="btn btn-secondary" id="locationCancelBtn" style="display: none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="empty-state" id="locationsEmpty" style="display: none;">
+          <p>No custom location notes yet. Add your first note above!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trailers Section -->
+    <section class="section" id="trailers">
+      <div class="section-container">
+        <h2 class="section-title">Trailers</h2>
+        <p class="section-intro">Official trailers and extended looks. Video embeds use trusted sources only.</p>
+
+        <div class="trailers-grid" id="trailersGrid">
+          <!-- Trailer cards will be rendered here -->
+        </div>
+
+        <!-- Trailer Form -->
+        <div class="form-section">
+          <h3 class="form-title">Add Trailer</h3>
+          <p class="form-instruction">Add official or trusted trailer links. Do not invent video IDs.</p>
+
+          <form id="trailerForm" class="data-form">
+            <input type="hidden" id="trailerId">
+            <div class="form-group">
+              <label for="trailerTitleInput">Title</label>
+              <input type="text" id="trailerTitleInput" class="form-input" required placeholder="e.g., Trailer 1">
+            </div>
+            <div class="form-group">
+              <label for="trailerDateInput">Release Date</label>
+              <input type="date" id="trailerDateInput" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="trailerDescInput">Description</label>
+              <textarea id="trailerDescInput" class="form-input" rows="3" required placeholder="Trailer description..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="trailerUrlInput">Video URL (YouTube or trusted source)</label>
+              <input type="url" id="trailerUrlInput" class="form-input" placeholder="https://youtube.com/watch?v=...">
+            </div>
+            <div class="form-group">
+              <label for="trailerThumbInput">Thumbnail URL (optional)</label>
+              <input type="url" id="trailerThumbInput" class="form-input" placeholder="https://example.com/image.jpg">
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="trailerSubmitBtn">Add Trailer</button>
+              <button type="button" class="btn btn-secondary" id="trailerCancelBtn" style="display: none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="empty-state" id="trailersEmpty" style="display: none;">
+          <p>No trailers added yet. Add your first trailer above!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="section" id="screenshots">
+      <div class="section-container">
+        <h2 class="section-title">Screenshots</h2>
+        <p class="section-intro">Official and fan-captured screenshots. All images use accessible alt text.</p>
+
+        <div class="controls-bar">
+          <input type="text" id="screenshotSearch" class="search-input" placeholder="Search screenshots..." aria-label="Search screenshots">
+          <select id="screenshotFilter" class="filter-select" aria-label="Filter screenshots by category">
+            <option value="all">All Categories</option>
+            <option value="gameplay">Gameplay</option>
+            <option value="environment">Environment</option>
+            <option value="characters">Characters</option>
+            <option value="vehicles">Vehicles</option>
+          </select>
+        </div>
+
+        <div class="screenshots-grid" id="screenshotsGrid">
+          <!-- Screenshot cards will be rendered here -->
+        </div>
+
+        <!-- Screenshot Form -->
+        <div class="form-section">
+          <h3 class="form-title">Add Screenshot</h3>
+          <p class="form-instruction">Add screenshot URLs with proper alt text for accessibility.</p>
+
+          <form id="screenshotForm" class="data-form">
+            <input type="hidden" id="screenshotId">
+            <div class="form-group">
+              <label for="screenshotUrlInput">Image URL</label>
+              <input type="url" id="screenshotUrlInput" class="form-input" required placeholder="https://example.com/image.jpg">
+            </div>
+            <div class="form-group">
+              <label for="screenshotTitleInput">Title</label>
+              <input type="text" id="screenshotTitleInput" class="form-input" required placeholder="e.g., Vice City Skyline">
+            </div>
+            <div class="form-group">
+              <label for="screenshotDescInput">Description</label>
+              <textarea id="screenshotDescInput" class="form-input" rows="2" required placeholder="Brief description..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="screenshotAltInput">Alt Text (required for accessibility)</label>
+              <input type="text" id="screenshotAltInput" class="form-input" required placeholder="Describe the image for screen readers">
+            </div>
+            <div class="form-group">
+              <label for="screenshotCategoryInput">Category</label>
+              <select id="screenshotCategoryInput" class="form-input" required>
+                <option value="gameplay">Gameplay</option>
+                <option value="environment">Environment</option>
+                <option value="characters">Characters</option>
+                <option value="vehicles">Vehicles</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="screenshotSubmitBtn">Add Screenshot</button>
+              <button type="button" class="btn btn-secondary" id="screenshotCancelBtn" style="display: none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="empty-state" id="screenshotsEmpty" style="display: none;">
+          <p>No screenshots added yet. Add your first screenshot above!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section" id="news">
+      <div class="section-container">
+        <h2 class="section-title">News & Resources</h2>
+        <p class="section-intro">Official sources, community resources, and fan analysis. Rumors are clearly marked as unconfirmed.</p>
+
+        <div class="controls-bar">
+          <input type="text" id="newsSearch" class="search-input" placeholder="Search news..." aria-label="Search news">
+          <select id="newsFilter" class="filter-select" aria-label="Filter news by category">
+            <option value="all">All Categories</option>
+            <option value="official">Official</option>
+            <option value="community">Community</option>
+            <option value="analysis">Fan Analysis</option>
+            <option value="rumor">Rumor (Unconfirmed)</option>
+          </select>
+          <select id="newsSort" class="filter-select" aria-label="Sort news">
+            <option value="date-desc">Newest First</option>
+            <option value="date-asc">Oldest First</option>
+            <option value="title-asc">Title A-Z</option>
+          </select>
+        </div>
+
+        <div class="news-grid" id="newsGrid">
+          <!-- News cards will be rendered here -->
+        </div>
+
+        <!-- News Form -->
+        <div class="form-section">
+          <h3 class="form-title">Add News Item</h3>
+          <p class="form-instruction">Use trusted sources only. Clearly label rumors as unconfirmed.</p>
+
+          <form id="newsForm" class="data-form">
+            <input type="hidden" id="newsId">
+            <div class="form-group">
+              <label for="newsHeadlineInput">Headline</label>
+              <input type="text" id="newsHeadlineInput" class="form-input" required placeholder="News headline">
+            </div>
+            <div class="form-group">
+              <label for="newsDateInput">Date</label>
+              <input type="date" id="newsDateInput" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="newsCategoryInput">Category</label>
+              <select id="newsCategoryInput" class="form-input" required>
+                <option value="official">Official</option>
+                <option value="community">Community Resource</option>
+                <option value="analysis">Fan Analysis</option>
+                <option value="rumor">Rumor (Unconfirmed)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="newsDescInput">Description</label>
+              <textarea id="newsDescInput" class="form-input" rows="3" required placeholder="Brief description or summary..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="newsSourceInput">Source Name</label>
+              <input type="text" id="newsSourceInput" class="form-input" required placeholder="e.g., Rockstar Newswire">
+            </div>
+            <div class="form-group">
+              <label for="newsUrlInput">Source URL</label>
+              <input type="url" id="newsUrlInput" class="form-input" placeholder="https://example.com/article">
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="newsSubmitBtn">Add News</button>
+              <button type="button" class="btn btn-secondary" id="newsCancelBtn" style="display: none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="empty-state" id="newsEmpty" style="display: none;">
+          <p>No news items added yet. Add your first news item above!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theories Section -->
+    <section class="section" id="theories">
+      <div class="section-container">
+        <h2 class="section-title">Pre-Stream Theories</h2>
+        <p class="section-intro">Fan theories and speculation. All theories are clearly labeled as unconfirmed unless officially verified.</p>
+
+        <div class="controls-bar">
+          <input type="text" id="theorySearch" class="search-input" placeholder="Search theories..." aria-label="Search theories">
+          <select id="theoryFilter" class="filter-select" aria-label="Filter theories by category">
+            <option value="all">All Categories</option>
+            <option value="map">Map & World</option>
+            <option value="story">Story & Characters</option>
+            <option value="gameplay">Gameplay Systems</option>
+            <option value="police">Police & AI</option>
+            <option value="activities">Side Activities</option>
+          </select>
+          <select id="theoryStatus" class="filter-select" aria-label="Filter theories by status">
+            <option value="all">All Statuses</option>
+            <option value="unconfirmed">Unconfirmed</option>
+            <option value="plausible">Plausible</option>
+            <option value="confirmed">Confirmed</option>
+          </select>
+        </div>
+
+        <div class="theories-grid" id="theoriesGrid">
+          <!-- Theory cards will be rendered here -->
+        </div>
+
+        <!-- Placeholder Theories -->
+        <div class="theories-placeholder">
+          <h3 class="subsection-title">Example Theory Categories</h3>
+          <ul class="theory-list">
+            <li><strong>Expanded Map:</strong> Theories about additional cities or regions beyond Vice City.</li>
+            <li><strong>Lucia & Jason Backstory:</strong> Fan speculation about their past and connection.</li>
+            <li><strong>Gameplay Systems:</strong> Theories about new mechanics, heists, or activities.</li>
+            <li><strong>Police Behavior:</strong> Expected improvements to AI and law enforcement.</li>
+            <li><strong>Side Activities:</strong> Speculation about mini-games, businesses, and hobbies.</li>
+          </ul>
+        </div>
+
+        <!-- Theory Form -->
+        <div class="form-section">
+          <h3 class="form-title">Add Theory</h3>
+          <p class="form-instruction">All new theories default to "Unconfirmed." Provide evidence URLs where possible.</p>
+
+          <form id="theoryForm" class="data-form">
+            <input type="hidden" id="theoryId">
+            <div class="form-group">
+              <label for="theoryTitleInput">Title</label>
+              <input type="text" id="theoryTitleInput" class="form-input" required placeholder="Theory title">
+            </div>
+            <div class="form-group">
+              <label for="theoryDescInput">Description</label>
+              <textarea id="theoryDescInput" class="form-input" rows="3" required placeholder="Explain your theory..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="theoryCategoryInput">Category</label>
+              <select id="theoryCategoryInput" class="form-input" required>
+                <option value="map">Map & World</option>
+                <option value="story">Story & Characters</option>
+                <option value="gameplay">Gameplay Systems</option>
+                <option value="police">Police & AI</option>
+                <option value="activities">Side Activities</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="theoryAuthorInput">Author</label>
+              <input type="text" id="theoryAuthorInput" class="form-input" required placeholder="Your name or username">
+            </div>
+            <div class="form-group">
+              <label for="theoryEvidenceInput">Evidence URL (optional)</label>
+              <input type="url" id="theoryEvidenceInput" class="form-input" placeholder="https://example.com/evidence">
+            </div>
+            <div class="form-group">
+              <label for="theoryStatusInput">Status</label>
+              <select id="theoryStatusInput" class="form-input" required>
+                <option value="unconfirmed">Unconfirmed</option>
+                <option value="plausible">Plausible</option>
+                <option value="confirmed">Confirmed</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="theorySubmitBtn">Add Theory</button>
+              <button type="button" class="btn btn-secondary" id="theoryCancelBtn" style="display: none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="empty-state" id="theoriesEmpty" style="display: none;">
+          <p>No theories added yet. Add your first theory above!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="section" id="summary">
+      <div class="section-container">
+        <h2 class="section-title">Post-Premiere Summary</h2>
+        <p class="section-intro">Editable table for tracking premiere reveals. Timestamps accept formats like 00:00 or 01:23:45.</p>
+
+        <div class="controls-bar">
+          <input type="text" id="summarySearch" class="search-input" placeholder="Search summary..." aria-label="Search summary">
+          <select id="summaryFilter" class="filter-select" aria-label="Filter summary by category">
+            <option value="all">All Categories</option>
+            <option value="opening">Opening</option>
+            <option value="characters">Characters</option>
+            <option value="gameplay">Gameplay</option>
+            <option value="regions">Regions</option>
+            <option value="activities">Activities</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="release">Release Info</option>
+          </select>
+          <select id="summaryStatus" class="filter-select" aria-label="Filter summary by status">
+            <option value="all">All Statuses</option>
+            <option value="confirmed">Confirmed</option>
+            <option value="speculation">Speculation</option>
+          </select>
+        </div>
+
+        <div class="summary-table-container">
+          <table class="summary-table" id="summaryTable">
+            <thead>
+              <tr>
+                <th>Timestamp</th>
+                <th>What Happens</th>
+                <th>Why It Matters</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="summaryTableBody">
+              <!-- Summary rows will be rendered here -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Summary Form -->
+        <div class="form-section">
+          <h3 class="form-title">Add Summary Entry</h3>
+          <p class="form-instruction">Timestamp format: 00:00 or 01:23:45 (hours:minutes:seconds).</p>
+
+          <form id="summaryForm" class="data-form">
+            <input type="hidden" id="summaryId">
+            <div class="form-group">
+              <label for="summaryTimestampInput">Timestamp</label>
+              <input type="text" id="summaryTimestampInput" class="form-input" required placeholder="00:00 or 01:23:45" pattern="^([0-9]{1,2}:)?[0-9]{2}:[0-9]{2}$">
+              <span class="form-help">Format: MM:SS or HH:MM:SS</span>
+            </div>
+            <div class="form-group">
+              <label for="summaryWhatInput">What Happens</label>
+              <input type="text" id="summaryWhatInput" class="form-input" required placeholder="Brief description of what happens">
+            </div>
+            <div class="form-group">
+              <label for="summaryWhyInput">Why It Matters</label>
+              <textarea id="summaryWhyInput" class="form-input" rows="2" required placeholder="Significance or implications..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="summaryCategoryInput">Category</label>
+              <select id="summaryCategoryInput" class="form-input" required>
+                <option value="opening">Opening</option>
+                <option value="characters">Characters (Lucia & Jason)</option>
+                <option value="gameplay">Gameplay Systems</option>
+                <option value="regions">Regions</option>
+                <option value="activities">Activities</option>
+                <option value="vehicles">Vehicles</option>
+                <option value="side">Side Characters</option>
+                <option value="release">Release Information</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="summaryStatusInput">Status</label>
+              <select id="summaryStatusInput" class="form-input" required>
+                <option value="confirmed">Confirmed</option>
+                <option value="speculation">Speculation</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="summarySubmitBtn">Add Entry</button>
+              <button type="button" class="btn btn-secondary" id="summaryCancelBtn" style="display: none;">Cancel Edit</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="empty-state" id="summaryEmpty" style="display: none;">
+          <p>No summary entries yet. Add your first entry above!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="section-container">
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-intro">Frequently asked questions about this fan hub.</p>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">How do the countdowns work?</summary>
+            <div class="faq-answer">
+              <p>The countdowns use UTC (Coordinated Universal Time) and update every second. They display days, hours, minutes, and seconds until the pre-download and launch dates. Status messages show "Upcoming," "Live," "Completed," or "Released" based on the current time.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Why UTC?</summary>
+            <div class="faq-answer">
+              <p>UTC is used as a universal reference that doesn't change with daylight saving time. Use the premiere schedule table to convert UTC to your local timezone.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is OBS mode?</summary>
+            <div class="faq-answer">
+              <p>OBS mode is a streamlined view for streaming or recording. Add <code>?mode=obs</code> to the URL to hide navigation, hero, and footer sections while enlarging countdown numbers. The background becomes transparent for overlay use.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How does localStorage work?</summary>
+            <div class="faq-answer">
+              <p>All your custom data (characters, locations, news, theories, summaries, trailers, screenshots) is saved in your browser's localStorage. This data persists across page reloads but is only stored on your device.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I edit countdown dates?</summary>
+            <div class="faq-answer">
+              <p>Countdown dates are hardcoded in the JavaScript file (script.js). To change them, edit the EVENTS constant in the code. This requires modifying the source files.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I add media?</summary>
+            <div class="faq-answer">
+              <p>Use the forms in the Trailers and Screenshots sections. Provide valid URLs for images and videos. Failed images show a fallback placeholder. Always include alt text for accessibility.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Can I add new sections?</summary>
+            <div class="faq-answer">
+              <p>Yes! This is a fan website template. You can add new sections by editing the HTML, CSS, and JavaScript files. Follow the existing patterns for consistency.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I clear saved data?</summary>
+            <div class="faq-answer">
+              <p>Use the "Clear Saved Data" button below. This removes only this website's localStorage data from your browser. It won't affect other websites or browser data.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How do I deploy this website?</summary>
+            <div class="faq-answer">
+              <p>Upload all three files (index.html, styles.css, script.js) to a web host. You can use GitHub Pages, Netlify, or any static hosting service. Keep all files in the same folder.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="clear-data-section">
+          <button class="btn btn-danger" id="clearDataBtn">Clear Saved Data</button>
+          <p class="clear-data-note">This removes only this website's localStorage data. Other browser data is unaffected.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-disclaimer">
+        <strong>Disclaimer:</strong> This is an unofficial fan website. Grand Theft Auto VI and all related trademarks are property of Rockstar Games.
+      </p>
+      <p class="footer-note">
+        All countdowns use UTC. Local times are approximate and may vary by daylight saving time.
+      </p>
+      <p class="footer-copy">
+        &copy; 2026 GTA VI Launch Hub – Fan Project
+      </p>
+    </div>
+  </footer>
+
+  <!-- Lightbox for Screenshots -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+    <div class="lightbox-content">
+      <img class="lightbox-image" id="lightboxImage" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
